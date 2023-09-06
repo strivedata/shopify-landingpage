@@ -109,6 +109,17 @@
                             Proceed with a 30-day free trial
                           </a>
                         {% endcomment %}
+                        <select name="id">
+                          {% for variant in product.variants %}
+                            {% if variant.available == true %}
+                              <option value="{{variant.id}}">
+                                {{ variant.price | money_with_currency }}
+                              </option>
+                            {% else %}
+                              <option disabled="disabled">{{ variant.title }} - sold out!</option>
+                            {% endif %}
+                          {% endfor %}
+                        </select>
                         <input
                           class="leading-4 cursor-pointer inline-flex items-center justify-center gap-x-2 rounded-3xl bg-gradient-to-r from-primary via-accent to-orange-600 hover:bg-gradient-to-l hover:scale-105 transition-all px-6 py-3.5 text-base font-medium  text-white shadow-lg focus:outline-none"
                           type="submit"

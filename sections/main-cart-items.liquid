@@ -25,8 +25,13 @@
 
 <cart-items class="page-width{% if cart == empty %} is-empty{% else %} section-{{ section.id }}-padding{% endif %}">
   <div class="title-wrapper-with-link">
-    <h1 class="title title--primary">{{ 'sections.cart.title' | t }}</h1>
+    <h1 class="title title--primary">{{ 'sections.cart.title' | t }} asds</h1>
     <a href="{{ routes.all_products_collection_url }}" class="underlined-link">{{ 'general.continue_shopping' | t }}</a>
+
+    {% unless item.selling_plan_allocation == null %}
+      <br>
+      <span class="cart-selling-plan">{{ item.selling_plan_allocation.selling_plan.name }}</span>
+    {% endunless %}
   </div>
 
   <div class="cart__warnings">
@@ -93,7 +98,12 @@
                       <p class="caption-with-letter-spacing">{{ item.product.vendor }}</p>
                     {%- endif -%}
 
-                    <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }}</a>
+                    <a href="{{ item.url }}" class="cart-item__name h4 break">{{ item.product.title | escape }} </a>
+
+                    {% unless item.selling_plan_allocation == null %}
+                      <br>
+                      <span class="cart-selling-plan">{{ item.selling_plan_allocation.selling_plan.name }}</span>
+                    {% endunless %}
 
                     {%- if item.original_price != item.final_price -%}
                       <div class="cart-item__discounted-prices">
@@ -163,7 +173,7 @@
                   </td>
 
                   <td class="cart-item__totals right medium-hide large-up-hide">
-                    <div class="loading-overlay hidden">
+                    <div class="hidden loading-overlay">
                       <div class="loading-overlay__spinner">
                         <svg
                           aria-hidden="true"
@@ -285,7 +295,7 @@
                   </td>
 
                   <td class="cart-item__totals right small-hide">
-                    <div class="loading-overlay hidden">
+                    <div class="hidden loading-overlay">
                       <div class="loading-overlay__spinner">
                         <svg
                           aria-hidden="true"
