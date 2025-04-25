@@ -1,8 +1,17 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/Logo_novioscan_sensa_bladder.png",
+    "logo": "shopify://shop_images/Logo_novioscan_sensa_bladder.png",
     "logo_width": 240,
-    "favicon": "shopify:\/\/shop_images\/favicon_novioscan_Tekengebied-1-100x100.png",
+    "favicon": "shopify://shop_images/favicon_novioscan_Tekengebied-1-100x100.png",
     "type_header_font": "roboto_n1",
     "heading_scale": 100,
     "type_body_font": "roboto_n4",
@@ -129,33 +138,12 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
-      "10436698916776057164": {
-        "type": "shopify:\/\/apps\/appstle-subscriptions-app\/blocks\/appstle-subscription-helper\/fe257d39-6f88-4f35-ab08-bd437e3aa94e",
+      "43484919600886680000": {
+        "type": "shopify://apps/gdpr-cookie-consent/blocks/banner/58c0baa2-6cc1-480c-9ea6-38d6d559556a",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "13392549970259155148": {
-        "type": "shopify:\/\/apps\/xo-insert-code\/blocks\/insert-code-header\/72017b12-3679-442e-b23c-5c62460717f5",
-        "disabled": false,
-        "settings": {
-          "custom_liquid": "",
-          "custom_css": "",
-          "custom_js": ""
-        }
-      },
-      "10148494829067693542": {
-        "type": "shopify:\/\/apps\/xo-insert-code\/blocks\/insert-code-body\/72017b12-3679-442e-b23c-5c62460717f5",
-        "disabled": false,
-        "settings": {
-          "custom_liquid": "",
-          "custom_css": "",
-          "custom_js": ""
-        }
+        "settings": {}
       }
     },
     "color_schemes": {
